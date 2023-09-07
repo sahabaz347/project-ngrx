@@ -1,0 +1,12 @@
+<div>
+    <!-- <mat-selection-list #userlist >
+        <mat-list-option *ngFor="let user of users" >
+            {{user.name}}({{user.email}})
+        </mat-list-option>
+      </mat-selection-list>
+      
+      <p>
+        Options selected: {{userlist.selectedOptions.selected.length}}
+      </p> -->
+    <app-user-card *ngFor="let user of users" [user]="user"></app-user-card>
+</div>

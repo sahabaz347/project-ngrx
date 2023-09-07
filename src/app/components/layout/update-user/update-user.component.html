@@ -1,0 +1,13 @@
+<div class="example-container">
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <mat-label>Enter your email</mat-label>
+      <input matInput placeholder="pat@example.com" formControlName="email" class="fill" >
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Enter your Name</mat-label>
+      <input matInput placeholder="John Doe" formControlName="name" >
+    </mat-form-field>
+    <button mat-raised-button color="primary">{{this.data.id?'Update':'Submit'}}</button>
+  </form>
+</div>

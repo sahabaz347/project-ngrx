@@ -1,0 +1,8 @@
+<div class="container">
+        <button mat-raised-button color="primary" style="margin-left: 1210px;margin-top: 10px;" (click)="addUser()">Add User</button>
+        <app-user-list *ngIf="!loading && !error" [users]="users"></app-user-list>
+        <mat-spinner *ngIf="loading && !error" class="example-margin" style="margin-left: 50%;">
+        </mat-spinner>
+        <app-app-error *ngIf="loading && error" [errorMsg]="errorMsg" (relode)=" tryAgain()"></app-app-error>
+
+</div>
