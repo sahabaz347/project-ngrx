@@ -21,10 +21,12 @@
   
   /* Style the action buttons */
   .action-buttons {
-    margin-top: 10px;
+    margin-top: -25px;
     display: flex;
     align-items: center;
+    padding: -4px;
   }
+  
   
   /* Style the delete button */
   .delete-button {
@@ -46,4 +48,4 @@
   .edit-button:hover {
     background-color: #1976D2;
   }
-  
+

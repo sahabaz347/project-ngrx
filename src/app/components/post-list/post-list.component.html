@@ -1,0 +1,8 @@
+<div class=" container row">
+    <div class="col-md-6" style="margin-left:1200px ;padding: 10px;">
+        <button mat-raised-button color="primary" (click)="addPost()">ADD POST</button>
+    </div>
+    <div class="col-md-6" style="margin-top:-61px ;">
+        <app-post-card *ngFor="let post of posts" [post]="post"></app-post-card>
+    </div>
+</div>

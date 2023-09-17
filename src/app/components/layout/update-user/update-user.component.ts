@@ -40,7 +40,8 @@ export class UpdateUserComponent implements OnInit {
         })
       } else {
         this.store.select('userReducer').subscribe(res => {
-          this.newId = res.ids[res.ids.length - 1] + 1;
+          this.newId =res.ids[res.ids.length - 1]==undefined?1:res.ids[res.ids.length - 1] + 1;
+          
         })
         this.youtubeRepoService.addUser(this.newId, name, email).subscribe(res => {
           this.youtubeRepoService.users.next(res[0]);

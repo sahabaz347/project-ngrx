@@ -1,11 +1,16 @@
 import { ActionReducerMap, createSelector } from "@ngrx/store";
 import * as fromUserReducer from "./user-reducer";
+import * as fromPostReducer from "./post-reducer";
+
 
 export interface RootReducerState{
     userReducer:fromUserReducer.UserReducerState
+    postReducer:fromPostReducer.PostReducerState
+
 }
 export const rootReducer:ActionReducerMap<RootReducerState>={
-    userReducer:fromUserReducer.UserReducer
+    userReducer: fromUserReducer.UserReducer,
+    postReducer: fromPostReducer.PostReducer
 }
 //selector
 // export const getUserState=(state:RootReducerState)=>{state.userReducer};

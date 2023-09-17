@@ -6,7 +6,6 @@ import { StoreUtility } from "../utils/store-utility";
 export interface UserReducerState {
     loading: boolean;
     loaded: boolean;
-    user: User[]; // Assuming User[] represents an array of user objects
     entities: { [id: number]: User }; // Update the type to match User
     ids: number[];
     error: boolean;
@@ -17,7 +16,6 @@ export interface UserReducerState {
 const initialState: UserReducerState = {
     loading: false,
     loaded: false,
-    user: [],
     error: false,
     errorMsg: 'Error Occurred',
     entities: {}, // Update the type to match { [id: string]: User }

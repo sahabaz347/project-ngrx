@@ -19,6 +19,10 @@ import { AppErrorComponent } from './components/app-error/app-error.component';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { UpdateUserComponent } from './components/layout/update-user/update-user.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ViewUserComponent } from './containers/view-user/view-user.component';
+import { PostListComponent } from './components/post-list/post-list.component';
+import { PostCardComponent } from './components/post-card/post-card.component';
+import { UpdateCommentComponent } from './components/layout/update-comment/update-comment.component';
 
 
 @NgModule({
@@ -33,6 +37,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     UserListComponent,
     AppErrorComponent,
     UpdateUserComponent,
+    ViewUserComponent,
+    PostListComponent,
+    PostCardComponent,
+    UpdateCommentComponent,
   ],
   imports: [
     BrowserModule,

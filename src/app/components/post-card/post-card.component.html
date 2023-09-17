@@ -1,0 +1,17 @@
+<mat-list role="list" class="list-post">
+    <mat-list-item matListItemTitle>{{post.title}}</mat-list-item>
+    <mat-list-item role="listitem" class="post-item" *ngFor="let comment of post.comments">
+        <span matListItemLine><strong><em>{{comment.description}}</em></strong></span>
+        <div class="action-buttons">
+            <button mat-raised-button color="warn" class="delete-button" (click)="onDelete(comment.id)">Delete</button>
+            <button mat-raised-button color="primary" class="edit-button" (click)="onEdit(comment.id)">Edit</button>
+        </div>
+    </mat-list-item>
+    <form [formGroup]="commentForm" (ngSubmit)="commentSubmit(post.id)">
+        <mat-form-field class="example-full-width">
+            <mat-label>Add Comment</mat-label>
+            <input type="text" matInput formControlName="addComment" placeholder="very good">
+        </mat-form-field>
+        <button mat-raised-button color="primary" [disabled]="this.commentForm.invalid">Add Comment</button>
+    </form>
+</mat-list>

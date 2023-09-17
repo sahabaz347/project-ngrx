@@ -1,0 +1,22 @@
+/* Style for the user data container */
+.user-data {
+    text-align: center; /* Center-align the content */
+    background-color: #f0f0f0; /* Background color for the container */
+    padding: 20px; /* Add some padding for spacing */
+    border-radius: 8px; /* Rounded corners for the container */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+  
+  /* Style for the user's name */
+  .user-data h1 {
+    font-size: 24px; /* Adjust the font size as needed */
+    color: #333; /* Change the text color to your preference */
+    margin-bottom: 10px; /* Add spacing between the name and email */
+  }
+  
+  /* Style for the user's email */
+  .user-data p {
+    font-size: 18px; /* Adjust the font size as needed */
+    color: #555; /* Change the text color to your preference */
+  }
+  

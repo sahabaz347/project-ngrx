@@ -1,0 +1,18 @@
+<div class="example-container" *ngIf="data">
+    <form [formGroup]="commentForm" (ngSubmit)="oncommentSubmit()">
+        <mat-form-field>
+            <mat-label>Enter your Comment</mat-label>
+            <input matInput placeholder="very good" formControlName="updateComment" class="fill">
+        </mat-form-field>
+        <button mat-raised-button color="primary">Update</button>
+    </form>
+</div>
+<div   class="example-container" *ngIf="!data">
+    <form [formGroup]="postForm" (ngSubmit)="onpostSubmit()">
+        <mat-form-field>
+            <mat-label>Add your Post</mat-label>
+            <input matInput placeholder="my post.." formControlName="mypost" class="fill">
+        </mat-form-field>
+        <button mat-raised-button color="primary">Submit</button>
+    </form>
+</div>

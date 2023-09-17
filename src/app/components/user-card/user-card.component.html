@@ -1,10 +1,9 @@
-<!-- <mat-card class="card">
-      <mat-card-title>{{user.name}}</mat-card-title>
-      <mat-card-content>{{user.email}}</mat-card-content>
-  </mat-card> -->
-  <mat-list role="list">
-    <mat-list-item role="listitem"><em>{{user.name}}</em>(<strong><em>{{user.email}}</em></strong>)</mat-list-item>
-    <button mat-raised-button color="warn" (click)="delete()">Delete</button>
-    <button mat-raised-button color="primary" style="margin-left: 10px;" (click)="update(user.id)">Edit</button>
-  </mat-list>
-  
+<mat-list role="list" class="list-user">
+  <mat-list-item role="listitem" class="user-item" (click)="onClick()">
+    <em>{{ user.name }}</em> (<strong><em>{{ user.email }}</em></strong>)
+  </mat-list-item>
+  <div class="action-buttons">
+    <button mat-raised-button color="warn" (click)="delete()" class="delete-button">Delete</button>
+    <button mat-raised-button color="primary" (click)="update(user.id)" class="edit-button">Edit</button>
+  </div>
+</mat-list>
